@@ -12,7 +12,7 @@ $(function() {
         pageNumber++;
 
         $("<div></div>").load( url, function( response, status, xhr ) {
-            var posts = $(response).filter('#blog-posts').html();
+            var posts = $(response).find('#blog-posts').html();
             if($.trim(posts) == '') {
               $(window).unbind('scroll');
             }
@@ -38,7 +38,7 @@ $(function() {
         pageNumber++;
 
         $("<div></div>").load( url, function( response, status, xhr ) {
-            var posts = $(response).filter('#comments').html();
+            var posts = $(response).find('#comments').html();
             if($.trim(posts) == '') {
               $(window).unbind('scroll');
             }

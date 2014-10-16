@@ -1,13 +1,17 @@
-<h1>Ivan the Terrible's Blog</h1>
+<h1 id="title">Ivan the Great's Blog</h1>
 
-<%= link_to 'New Post', new_post_path %>
+<div><a id="new-post" href="/posts/new">New Post</a></div>
 
 <section class="blog" id="blog-posts">
   <% @posts.each do |post| %>
-    <% %>
-    <h2>Post <%= "#{post.id}: #{post.title}" %></h2>
-    <div class="post"><%= post.body %></div>
-    <%= render 'post_nav', post: post %>
+    <article>
+      <h1><%= "#{post.title}" %></h1>
+      <p class="date"><%= "#{post.created_at.strftime('%b %e, %Y')}" %></p>
+      <p class="post">
+        <%= post.body %>
+        <a class="read-more" href="/posts/<%= post.id %>">Read More</a>
+      </p>
+    </article>
   <% end %>
 </section>
 
