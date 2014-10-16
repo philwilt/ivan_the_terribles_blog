@@ -9,12 +9,21 @@ Since I know you want to read them all, I designed my page to show EVERYTHING on
 I know it is a little slow (but totes worth it!!!!)... _Do you know how I can make it faster?_
 
 
-Speed up with the following:
+Sped up with the following:
 
 * [Action Caching](http://railscasts.com/episodes/93-action-caching)
 * [Rack Zippy](https://github.com/eliotsykes/rack-zippy)
 * [Puma Web Server](https://github.com/puma/puma)
 * jQuery custom infinite scroll
+
+Performance Monitoring:
+
+* [rack-mini-profiler](https://github.com/MiniProfiler/rack-mini-profiler)
+* [New Relic](http://newrelic.com/)
+
+[Load Impact](http://loadimpact.com/load-test/ivantheterribleblog.herokuapp.com-f0bc327321443c4bc54d58ff5bd3f670)
+
+
 
 Thanks to suggestions by [Erik](https://github.com/enilsen16).
 
