@@ -12,9 +12,10 @@ I know it is a little slow (but totes worth it!!!!)... _Do you know how I can ma
 Sped up with the following:
 
 * [Action Caching](http://railscasts.com/episodes/93-action-caching)
+* [Kaminari](https://github.com/amatsuda/kaminari)
 * [Rack Zippy](https://github.com/eliotsykes/rack-zippy)
 * [Puma Web Server](https://github.com/puma/puma)
-* jQuery custom infinite scroll
+* Custom Infinite Scroll jQuery
 
 Performance Monitoring:
 
