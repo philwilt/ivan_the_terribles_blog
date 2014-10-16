@@ -21,6 +21,8 @@ module IvanTheTerriblesBlog
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
+    config.middleware.use Rack::Deflater
+    config.middleware.insert_before ActionDispatch::Static, Rack::Deflater
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
 
