@@ -9,9 +9,9 @@ IvanTheTerriblesBlog::Application.configure do
   config.action_controller.perform_caching = true
   config.autoload_paths += %W("#{config.root}/app/sweepers")
 
-  # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_assets = false
-
+  # Puts ActionDispatch::Static in middleware stack which we are going to replace with
+  # Rack::Zippy::AssetServer
+  config.serve_static_assets = true
   # Compress JavaScripts and CSS
   config.assets.compress = true
 

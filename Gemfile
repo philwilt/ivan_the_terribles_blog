@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-
 gem 'kaminari'
 gem 'newrelic_rpm'
+gem 'rack-zippy'
 gem 'rails', '~> 3.2.13'
 gem 'puma'
 
