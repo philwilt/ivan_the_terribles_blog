@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
-  caches_action :index
-  cache_sweeper :comment_sweeper, only: [:create, :update, :destroy]
+  # caches_action :index
+  # cache_sweeper :comment_sweeper, only: [:create, :update, :destroy]
   # GET /comments
   # GET /comments.json
   def index

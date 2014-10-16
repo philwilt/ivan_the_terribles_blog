@@ -10,9 +10,6 @@ class CommentSweeper < ActionController::Caching::Sweeper
   end
 
   def expire_cache(comment)
-    expire_action '/comments'
-    expire_action "/comments/#{comment.id}"
-    expire_action "posts/#{comment.post_id}/comments/#{comment.id}"
-    expire_action "posts/#{comment.post_id}"
+    expire_action(controller: 'comments', action: %w( index ))
   end
 end
