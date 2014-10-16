@@ -32,8 +32,9 @@ $(function() {
 
       if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
         mainContent.css('padding-bottom', '100em');
-
-        var url = "/posts/page/" + pageNumber;
+        var postNumber = parseInt(document.URL.split('/').pop());
+        console.log(postNumber);
+        var url = "/posts/" + postNumber + '/page/' + pageNumber;
         pageNumber++;
 
         $("<div></div>").load( url, function( response, status, xhr ) {
