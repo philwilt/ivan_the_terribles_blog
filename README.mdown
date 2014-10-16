@@ -1,13 +1,6 @@
-# My New Blog!
+# Fast Blog!
 
-I've got a lot to say, and now I have a place to say it!!!!!
-
-Read all my amazing posts!!!!! You can load them into the app with: `rake load:blog`
-
-Since I know you want to read them all, I designed my page to show EVERYTHING on the front page of the site!!!!!
-
-I know it is a little slow (but totes worth it!!!!)... _Do you know how I can make it faster?_
-
+Rails blog optimized for speed!
 
 Sped up with the following:
 
@@ -26,11 +19,11 @@ Performance Monitoring:
 
 ![Load Impact](https://s3-us-west-2.amazonaws.com/philwilt/githubimages/ivansblogbench.png)
 
-And don't sacrifice on UX! Pretty and fast thanks to [bourbon](http://bourbon.io/)
+## Screenshot
+
+Don't sacrifice on UX! Pretty and fast thanks to [bourbon](http://bourbon.io/)
 
 ![Screenshot](https://s3-us-west-2.amazonaws.com/philwilt/githubimages/ivansblog.png)
 
 
 Thanks to suggestions by [Erik](https://github.com/enilsen16).
-
-
