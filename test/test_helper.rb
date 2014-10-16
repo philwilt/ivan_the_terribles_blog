@@ -3,6 +3,9 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 
 class ActiveSupport::TestCase
+  ActiveSupport::Dependencies.mechanism = :require
+  Rails.logger.level = ActiveSupport::BufferedLogger::INFO
+
   # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
   #
   # Note: You'll currently still have to declare fixtures explicitly in integration tests

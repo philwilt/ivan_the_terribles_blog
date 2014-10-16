@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
+gem 'actionpack-page_caching'
+gem 'actionpack-action_caching'
+gem 'kaminari'
 gem 'rails', '~> 3.2.13'
+gem 'puma'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -27,6 +31,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-doc'
   gem 'hirb'
+  gem 'rack-mini-profiler'
 end
 
 group :test do

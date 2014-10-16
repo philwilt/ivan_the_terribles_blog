@@ -7,3 +7,18 @@ Read all my amazing posts!!!!! You can load them into the app with: `rake load:b
 Since I know you want to read them all, I designed my page to show EVERYTHING on the front page of the site!!!!!
 
 I know it is a little slow (but totes worth it!!!!)... _Do you know how I can make it faster?_
+
+
+HomepageTest#test_homepage (481 ms warmup)
+           wall_time: 466 ms
+              memory: unsupported
+             objects: unsupported
+             gc_runs: 1
+             gc_time: 126 ms
+.
+
+Finished in 38.203184 seconds.
+
+5 tests, 0 assertions, 0 failures, 0 errors, 0 pendings, 0 omissions, 0 notifications
+0% passed
+

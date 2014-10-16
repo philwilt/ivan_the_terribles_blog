@@ -1,9 +1,18 @@
 <h1>Ivan the Terrible's Blog</h1>
 
-<section class="blog">
-  <%= render @posts %>
+<%= link_to 'New Post', new_post_path %>
+
+<section class="blog" id="blog-posts">
+  <% @posts.each do |post| %>
+    <% %>
+    <h2>Post <%= "#{post.id}: #{post.title}" %></h2>
+    <div class="post"><%= post.body %></div>
+    <%= render 'post_nav', post: post %>
+  <% end %>
 </section>
 
 <br />
 
-<%= link_to 'New Post', new_post_path %>
+
+
+
