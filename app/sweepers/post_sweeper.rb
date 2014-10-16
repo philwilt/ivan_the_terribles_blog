@@ -10,7 +10,6 @@ class PostSweeper < ActionController::Caching::Sweeper
   end
 
   def expire_cache(post)
-    expire_action '/posts'
-    expire_action "/posts/#{post.id}"
+    expire_page(controller: 'posts', action: %w( index ))
   end
 end
