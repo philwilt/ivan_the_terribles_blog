@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'actionpack-page_caching'
-gem 'actionpack-action_caching'
 gem 'kaminari'
 gem 'rails', '~> 3.2.13'
 gem 'puma'
