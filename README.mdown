@@ -15,7 +15,7 @@ Performance Monitoring:
 * [rack-mini-profiler](https://github.com/MiniProfiler/rack-mini-profiler)
 * [New Relic](http://newrelic.com/)
 
-[Load Impact](http://loadimpact.com/load-test/ivantheterribleblog.herokuapp.com-41148b262d6bd5574523fbe429b40992)
+[Load Impact](https://loadimpact.com/load-test/ivantheterribleblog.herokuapp.com-d1b1b4631a2f4934fe5b06482534f3c5)
 
 ![Load Impact](https://s3-us-west-2.amazonaws.com/philwilt/githubimages/ivansblogbench.png)
 
