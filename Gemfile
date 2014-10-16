@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+
 gem 'kaminari'
 gem 'newrelic_rpm'
 gem 'rails', '~> 3.2.13'
@@ -24,6 +25,10 @@ end
 
 gem 'jquery-rails'
 gem 'faker'
+
+group :production do
+  gem 'rails_12factor'
+end
 
 group :development, :test do
   gem 'rspec-rails'
