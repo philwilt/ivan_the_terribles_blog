@@ -7,6 +7,7 @@
 # ignore cached files
 public/posts/**/*
 public/comments/**/*
+public/index.html
 # Ignore bundler config
 /.bundle
 
