@@ -18,6 +18,30 @@
   }
 }
 
+#notice {
+  @extend %flash-notice;
+  @include span-columns(6);
+  @include shift(2);
+  text-align: center;
+}
+
+#home,
+#new-post,
+#new-comment {
+  display: inline-block;
+  font-family: $sans-serif;
+  font-weight: 700;
+  font-size: .8em;
+  text-transform: uppercase;
+  position: fixed;
+  top: 2.5rem;
+  left: 1.5rem;
+}
+
+#home {
+  top: 1rem;
+}
+
 form {
   @include span-columns(12);
   @include row;

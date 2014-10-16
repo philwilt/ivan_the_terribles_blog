@@ -5,17 +5,6 @@
   margin-left: 20px;
 }
 
-#new-post {
-  display: inline-block;
-  font-family: $sans-serif;
-  font-weight: 700;
-  font-size: .8em;
-  text-transform: uppercase;
-  position: fixed;
-  top: 2rem;
-  left: 1.5rem;
-}
-
 #blog-posts {
   @include span-columns(12);
   @include row;

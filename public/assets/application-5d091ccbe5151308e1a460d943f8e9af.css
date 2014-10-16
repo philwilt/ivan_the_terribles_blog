@@ -339,7 +339,6 @@ article {
   display: block;
   margin-right: 2.35765%;
   width: 48.82117%;
-  margin-left: 17.05961%;
   text-align: center; }
   #notice:last-child {
     margin-right: 0; }
@@ -353,7 +352,7 @@ article {
   font-size: .8em;
   text-transform: uppercase;
   position: fixed;
-  top: 2.5rem;
+  top: 2rem;
   left: 1.5rem; }
 
 #home {

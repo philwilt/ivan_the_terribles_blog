@@ -24,7 +24,7 @@ class RepliesController < ApplicationController
   # GET /replies/new
   # GET /replies/new.json
   def new
-    @reply = Reply.new
+    @reply = Reply.new()
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,11 +40,12 @@ class RepliesController < ApplicationController
   # POST /replies
   # POST /replies.json
   def create
-    @reply = Reply.new(params[:reply])
+    @comment = Comment.find(params[:comment_id])
+    @reply = @comment.replies.build(params[:reply])
 
     respond_to do |format|
       if @reply.save
-        format.html { redirect_to @reply, notice: 'Reply was successfully created.' }
+        format.html { redirect_to @comment.post, notice: 'Reply was successfully created.' }
         format.json { render json: @reply, status: :created, location: @reply }
       else
         format.html { render action: "new" }
@@ -60,7 +61,7 @@ class RepliesController < ApplicationController
 
     respond_to do |format|
       if @reply.update_attributes(params[:reply])
-        format.html { redirect_to @reply, notice: 'Reply was successfully updated.' }
+        format.html { redirect_to @reply.comment.post, notice: 'Reply was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

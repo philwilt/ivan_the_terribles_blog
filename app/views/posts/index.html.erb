@@ -1,5 +1,9 @@
 <h1 id="title">Ivan the Great's Blog</h1>
 
+<% if flash[:notice] %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
 <div><a id="new-post" href="/posts/new">New Post</a></div>
 
 <section class="blog" id="blog-posts">

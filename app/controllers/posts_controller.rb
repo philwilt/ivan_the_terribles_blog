@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.page params[:page]
+    @posts = Post.order("created_at desc").page params[:page]
 
     respond_to do |format|
       format.html # index.html.erb
@@ -78,7 +78,7 @@ class PostsController < ApplicationController
     @post.destroy
 
     respond_to do |format|
-      format.html { redirect_to posts_url }
+      format.html { redirect_to posts_url, notice: 'Deleted the post successfully'}
       format.json { head :no_content }
     end
   end
