@@ -24,6 +24,9 @@ Performance Monitoring:
 
 [Load Impact](http://loadimpact.com/load-test/ivantheterribleblog.herokuapp.com-41148b262d6bd5574523fbe429b40992)
 
+![Load Impact](https://s3-us-west-2.amazonaws.com/philwilt/githubimages/ivansblogbench.png)
+
+![Screenshot](https://s3-us-west-2.amazonaws.com/philwilt/githubimages/ivansblog.png)
 
 
 Thanks to suggestions by [Erik](https://github.com/enilsen16).
