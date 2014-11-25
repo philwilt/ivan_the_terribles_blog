@@ -1,9 +1,26 @@
-<h1>Ivan the Terrible's Blog</h1>
+<h1 id="title">Ivan the Great's Blog</h1>
 
-<section class="blog">
-  <%= render @posts %>
+<% if flash[:notice] %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
+<div><a id="new-post" href="/posts/new">New Post</a></div>
+
+<section class="blog" id="blog-posts">
+  <% @posts.each do |post| %>
+    <article>
+      <h1><%= "#{post.title}" %></h1>
+      <p class="date"><%= "#{post.created_at.strftime('%b %e, %Y')}" %></p>
+      <p class="post">
+        <%= post.body %>
+        <a class="read-more" href="/posts/<%= post.id %>">Read More</a>
+      </p>
+    </article>
+  <% end %>
 </section>
 
 <br />
 
-<%= link_to 'New Post', new_post_path %>
+
+
+

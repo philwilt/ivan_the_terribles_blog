@@ -4,6 +4,10 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile ~/.gitignore_global
 
+# ignore cached files
+public/posts/**/*
+public/comments/**/*
+public/index.html
 # Ignore bundler config
 /.bundle
 

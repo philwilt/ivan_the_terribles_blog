@@ -1,8 +1,10 @@
 class PostsController < ApplicationController
+  caches_action :index
+  cache_sweeper :post_sweeper, only: [:create, :update, :destroy]
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.order("created_at desc").page(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,7 +16,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
-
+    @comments = @post.comments.page(params[:page]).includes(:replies).all
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @post }
@@ -76,7 +78,7 @@ class PostsController < ApplicationController
     @post.destroy
 
     respond_to do |format|
-      format.html { redirect_to posts_url }
+      format.html { redirect_to posts_url, notice: 'Deleted the post successfully'}
       format.json { head :no_content }
     end
   end

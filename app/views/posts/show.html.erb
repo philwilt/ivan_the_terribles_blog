@@ -1,15 +1,45 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
-
-<p>
-  <b>Body:</b>
-  <%= @post.body %>
-</p>
+<h1 id="title"><%= "#{@post.title}" %></h1>
+<% if flash[:notice] %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+<div><a id="new-comment" href="/posts/<%= "#{@post.id}" %>/comments/new">New Comment</a>
+</div>
 
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<div id="blog-post">
+  <article>
+    <p class="date">
+      <%= "#{@post.created_at.strftime('%b %e, %Y')}" %>
+      <a href="/posts/<%= "#{@post.id}" %>/edit">Edit</a>
+      <%= link_to 'Delete', post_path(@post), method: :delete %>
+      </p>
+    <p class="post">
+      <%= @post.body %>
+    </p>
+  </article>
+
+  <div id="comments">
+  <% @comments.each do |comment| %>
+    <div class="comment">
+      <h3>Comment <%= comment.id %></h3>
+      <p class="date">
+        <%= "#{comment.created_at.strftime('%b %e, %Y')}" %>
+        <a href="/posts/<%= "#{@post.id}" %>/comments/<%= "#{comment.id}" %>/edit">Edit</a>
+        <a href="/posts/<%= "#{@post.id}" %>/comments/<%= "#{comment.id}" %>/replies/new">Reply</a>
+      </p>
+      <p><%= comment.body %></p>
+      <% comment.replies.each do |reply| %>
+        <div class="reply">
+          <h4>Reply <%= reply.id %></h4>
+          <p class="date">
+            <%= "#{reply.created_at.strftime('%b %e, %Y')}" %>
+            <a href="/posts/<%= "#{@post.id}" %>/comments/<%= "#{comment.id}" %>/replies/<%= "#{reply.id}" %>/edit">Edit</a>
+          </p>
+          <p><%= reply.body %></p>
+      </div>
+      <% end %>
+    </div>
+  <% end %>
+  </div>
+</div>
+

@@ -1,0 +1,33 @@
+// Place all the styles related to the Comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.comment,
+.reply {
+  margin-left: 30px;
+  margin-top: 3rem;
+
+  h3,
+  h4 {
+    font-family: $serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.2em;
+    margin-bottom: .4em;
+  }
+
+  p {
+    font-family: $serif;
+    font-weight: 400;
+    line-height: 1em;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+  }
+
+  p.date {
+    color: transparentize($base-font-color, .6);
+    font-family: $serif;
+    font-style: italic;
+    font-size: .9em;
+    margin-bottom: .3em;
+  }
+}
